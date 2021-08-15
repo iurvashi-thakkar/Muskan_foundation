@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muskan Foundation</title>
+    <!-- <link rel="stylsheet" href="C:\Users\Asus\Desktop\internship_project\style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: montserrat;
+        background: linear-gradient(#070707d2, #070707d2) ,url('temp2.jpg') no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100vh;
+    }
+    .hide{
+        display: none !important;
+    }
+    nav{
+        background: linear-gradient(#070707d2, #070707d2) ;
+        height: 80px;
+        width: 100%;
+        opacity:0.8;
+    }
+    label.logo{
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+        
+    }
+    nav ul {
+        float: right;
+        margin-right: 20px;
+    }
+    nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+    }
+    nav ul li a{
+        color: white;
+        font-size: 17px;
+        text-transform: uppercase;
+        padding: 7px 13px; 
+        border-radius: 3px; 
+    }
+    a.active ,a:hover{
+        background:none;
+        color:rgb(226, 176, 69);
+        transition: 0.5s;
+    }
+    .checkbtn{
+        font-size: 30px;
+        color: white;
+        float:right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+    }
+    #check{
+        display: none;
+    }
+    @media (max-width:952px) {
+        label.logo{
+            font-size: 30px;
+            padding-left: 50px;
+        }
+        nav ul li a{
+            font-size: 16px;
+        }
+        a:hover{
+           background: none;
+           color:rgb(226, 176, 69);
+           transition: 0.5s;
+       }
+    }
+    @media (max-width:858px) {
+       .checkbtn{
+           display: block;
+       }
+       ul{
+           position: fixed;
+           width: 100%;
+           height: 100vh !important;
+           z-index: 1000;
+           top:80px;
+           left:-100%;
+           bottom: 0%;
+           transition: all 0.5s;
+           text-align: center;
+       }
+       nav ul li{
+           display: block;
+           margin:50px 0;
+           line-height: 30px;
+       }
+       nav ul li a{
+           font-size: 20px;
+       }
+       a:hover{
+           background: none;
+           color:rgb(226, 176, 69);
+           transition: 0.5s;
+       }
+       #check:checked ~ ul{
+           left:0;
+       }
+    }
+    .myheader{
+            margin-top:330px;
+            font-weight: bold;
+            color:white;
+            font-size: 27px;
+            margin-left: 30px;
+            opacity: 0.7;  
+            z-index: 100;
+    }
+    span{
+        font-size: 20px;
+        opacity: 0.7;
+    }
+    .copyright .icons a:hover {
+      color: #933ded;
+      background: none;
+      text-decoration: none;
+    }
+    .copyright .icons a {
+      text-decoration: none;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      width: 8px;
+      height: 8px;
+      font-size: 8px;
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      line-height: 35px;
+      padding: 0.4%;
+      margin-right: 15px;
+      margin-bottom: 1px;
+    }
+    @media (max-width: 767px) {
+      .footer h2:first-child {
+        margin-top: 10%;
+      }
+      .footer .icons {
+        margin-bottom: 15%;
+      }
+      .footer h4,
+      .footer .mid-btm,
+      .footer .contact p {
+        text-align: left;
+      }
+      .footer .mid-btm {
+        margin-bottom: 10%;
+      }
+      .footer .contact {
+        padding-left: 0%;
+        margin-bottom: 5%;
+      }
+    }
+    .copyright {
+      background: rgba(255, 255, 255, 0);
+      padding: 10px 0;
+      text-align: center;
+      bottom: 0;
+    }
+    .copyright p {
+      font-size: 15px;
+      color: #fff;
+    }
+img{
+    height: 70px;
+    margin-left: 28px;
+}
+.btn1{
+    color:rgb(226, 176, 69);
+    /* color:white;
+    border-radius: 5px;  */
+}
+/* .btn:hover{
+    background-color: white;
+    color:black;
+} */
+</style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check" onclick="myfun()">
+        <label for="check" class="checkbtn" >
+            <i class= "fas fa-bars"></i>
+        </label>
+        <!-- <label class="logo" >Muskan</label> -->
+        
+            <img src="C:\Users\Asus\Desktop\internship_project\logo-removebg-preview.png">
+       
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="myheader">
+            <div>
+                <h1>"There Is More Happiness In Giving<br>
+                     Then Receiving."</h1>
+                <h4><span>Become a altruistic,
+                    Be a Part of Change.</span>
+                    </h4>
+                <br />
+                <br />
+                <div>
+                    <a href="https://rzp.io/l/avXZchn0n" style="text-decoration: none;"
+                        class="btn1">Donate now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="copyright">
+        <div class="container">
+            <div style="text-align:center;font-weight: 800;">
+                <br />
+                <div class="icons">
+                    <a href="#" target="_blank">
+                        <i class="fa fa-instagram"></i></a> &nbsp;
+                    <a href="#" target="_blank">
+                        <i class="fa fa-twitter"></i></a> &nbsp;
+                    <a href="#" target="_blank">
+                        <i class="fa fa-linkedin-square"></i></a> &nbsp;
+                    <a href="#" target="_blank">
+                        <i class="fa fa-facebook"></i></a> &nbsp;
+                </div>
+            </div>
+            <br />
+            <p>
+                © Design By Urvashi Thakkar
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    function myfun(){
+        const div=document.querySelector(".myheader");
+        div.classList.toggle("hide");
+        const div1=document.querySelector(".container");
+        div1.classList.toggle("hide");
+    }
+</script>
+</html>
